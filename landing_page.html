@@ -14,14 +14,39 @@
 </head>
 
 <body>
-    <div class="vertical_bar">
-
-    </div>
-
+    
+    
     <!-- Faire un super titre -->
-
+    
     <!-- le menu bar veritcal -->
     
+    
+    
+    <div class="horizontal_bar">
+        <nav>
+            <h1 class="first_title" style="color: black">
+                Ceci est un super titre
+            </h1>
+            <ul>
+                <li><a href="#">landing_page</a></li>
+                <li class="deroulant"><a href="#">Bpoum's Home &ensp;</a>
+                    <ul class="sous">
+                        <li><a href="#">Bpoumeau</a></li>
+                        <li><a href="#">Sa vie</a></li>
+                        <li><a href="#">Son oeuvre</a></li>
+                    </ul>
+                </li>
+                <li class="deroulant"><a href="#">Cmassard's Home&ensp;</a>
+                    <ul class="sous">
+                        <li><a href="#">Cmassard</a></li>
+                        <li><a href="#">Sa vie</a></li>
+                        <li><a href="#">Son oeuvre</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Nous contacter</a></li>
+            </ul>
+        </nav>
+    </div>
     <div class="mere_des_cv">
         <div class="img_div1">
             <img class="image_de_pro bpoums_img" src="./src/potitchat.jpg" alt="Photo de bpoumeau">
@@ -32,19 +57,27 @@
 
         </div>
     </div>
+    <!-- <div class="area_de_text">
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+    </div> -->
+
 
 </body>
 
 </html>
 
 <script>
+    let body_query = document.querySelector('body');
     let img_bp = document.querySelector('.bpoums_img');
     let img_cm = document.querySelector('.cmassard_img');
+    // let frst_title = document.querySelector('.first_title');
+
+
+
 
     img_bp.addEventListener('mouseenter', biggerBpImg);
-    // img_bp.addEventListener('mouseleave', lesserBpImg);
     img_cm.addEventListener('mouseenter', biggerCmImg);
-    // img_cm.addEventListener('mouseleave', lesserCmImg);
+    // frst_title.addEventListener('mouseenter', biggerFrstTittle);
 
     let interBbpi;
     function    biggerBpImg() { 
@@ -58,15 +91,22 @@
         clearInterval(interCcmi);    
         interCcmi = setInterval(() => { getLesserElem(img_cm); }, 500);
     }
+    let interFrstTitle;
+    function    biggerFrstTittle() { 
+        getBiggerElem(frst_title); 
+        clearInterval(interFrstTitle);
+        interFrstTitle = setInterval(() => {getLesserElem(frst_title); }, 500);
+    }
 
     function    getBiggerElem(elem)
     {
-        console.log(elem.class);
+        elem.style.transition = ".2s";
         elem.style.scale = "150%";
     }
-
+    
     function    getLesserElem(elem)
     {
+        elem.style.transition = ".5s";
         elem.style.scale = "100%";
     }
 
