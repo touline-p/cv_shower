@@ -1,0 +1,47 @@
+body {
+    background-image: url(./src/joseph-barrientos-49318-unsplash1-1-scaled.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    
+}
+
+.opacity_maker {
+    background-color: #0E6BA8;
+    opacity: 100%;
+    width: 100vw;
+    height: 100vh;
+}
+
+.image_de_pro {
+    border-radius: 20%;
+    height: 400px;
+    width: 400px;
+    transition: .2s;
+}
+
+.bpoums_img {
+    position: ;
+}
+
+.vertical_bar {
+    width: 5%;
+    height: 300vh;
+    background-color: #0E6BA8;
+    opacity: 100%;
+    background-attachment: fixed;
+}
+.mere_des_cv {
+    width: 94%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    align-items: center;
+}
